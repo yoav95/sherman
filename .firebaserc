@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "sherman-nadlan"
+  },
+  "targets": {
+    "sherman-nadlan": {
+      "hosting": {
+        "next": [
+          "sherman-next"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

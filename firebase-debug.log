@@ -1,0 +1,50 @@
+[debug] [2023-08-12T11:54:31.112Z] ----------------------------------------------------------------------
+[debug] [2023-08-12T11:54:31.114Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\yoava\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:next
+[debug] [2023-08-12T11:54:31.115Z] CLI Version:   12.4.7
+[debug] [2023-08-12T11:54:31.115Z] Platform:      win32
+[debug] [2023-08-12T11:54:31.115Z] Node Version:  v18.16.1
+[debug] [2023-08-12T11:54:31.116Z] Time:          Sat Aug 12 2023 14:54:31 GMT+0300 (Israel Daylight Time)
+[debug] [2023-08-12T11:54:31.116Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-12T11:54:31.199Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-12T11:54:31.199Z] > authorizing via signed-in user (yoav.amenou@gmail.com)
+[debug] [2023-08-12T11:54:31.200Z] [iam] checking project sherman-nadlan for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-08-12T11:54:31.202Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sherman-nadlan:testIamPermissions [none]
+[debug] [2023-08-12T11:54:31.202Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sherman-nadlan:testIamPermissions x-goog-quota-user=projects/sherman-nadlan
+[debug] [2023-08-12T11:54:31.202Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sherman-nadlan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-08-12T11:54:32.287Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sherman-nadlan:testIamPermissions 200
+[debug] [2023-08-12T11:54:32.288Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sherman-nadlan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-08-12T11:54:32.289Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sherman-nadlan [none]
+[debug] [2023-08-12T11:54:32.681Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sherman-nadlan 200
+[debug] [2023-08-12T11:54:32.681Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sherman-nadlan {"projectId":"sherman-nadlan","projectNumber":"409987052431","displayName":"Sherman Nadlan","name":"projects/sherman-nadlan","resources":{"hostingSite":"sherman-nadlan","realtimeDatabaseInstance":"sherman-nadlan-default-rtdb","storageBucket":"sherman-nadlan.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_4ee199cb-4a6c-4812-a811-36a7ae289b82"}
+[debug] [2023-08-12T11:54:38.723Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/sherman-nadlan/sites pageToken=&pageSize=10
+[debug] [2023-08-12T11:54:39.973Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/sherman-nadlan/sites 200
+[debug] [2023-08-12T11:54:39.973Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/sherman-nadlan/sites {"sites":[{"name":"projects/sherman-nadlan/sites/sherman","defaultUrl":"https://sherman.web.app","type":"USER_SITE"},{"name":"projects/sherman-nadlan/sites/sherman-cms","defaultUrl":"https://sherman-cms.web.app","type":"USER_SITE"},{"name":"projects/sherman-nadlan/sites/sherman-nadlan","defaultUrl":"https://sherman-nadlan.web.app","appId":"1:409987052431:web:941f351ac7e52fe97e51fa","type":"DEFAULT_SITE"},{"name":"projects/sherman-nadlan/sites/sherman-next","defaultUrl":"https://sherman-next.web.app","type":"USER_SITE"}]}
+[debug] [2023-08-12T11:54:39.975Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/sherman-nadlan/sites 
+[debug] [2023-08-12T11:54:41.172Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/sherman-nadlan/sites 200
+[debug] [2023-08-12T11:54:41.173Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/sherman-nadlan/sites {"sites":[{"name":"projects/sherman-nadlan/sites/sherman","defaultUrl":"https://sherman.web.app","type":"USER_SITE"},{"name":"projects/sherman-nadlan/sites/sherman-cms","defaultUrl":"https://sherman-cms.web.app","type":"USER_SITE"},{"name":"projects/sherman-nadlan/sites/sherman-nadlan","defaultUrl":"https://sherman-nadlan.web.app","appId":"1:409987052431:web:941f351ac7e52fe97e51fa","type":"DEFAULT_SITE"},{"name":"projects/sherman-nadlan/sites/sherman-next","defaultUrl":"https://sherman-next.web.app","type":"USER_SITE"}]}
+[debug] [2023-08-12T11:54:41.173Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sherman-nadlan/webApps/1:409987052431:web:941f351ac7e52fe97e51fa/config [none]
+[debug] [2023-08-12T11:54:42.094Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sherman-nadlan/webApps/1:409987052431:web:941f351ac7e52fe97e51fa/config 200
+[debug] [2023-08-12T11:54:42.095Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sherman-nadlan/webApps/1:409987052431:web:941f351ac7e52fe97e51fa/config {"projectId":"sherman-nadlan","appId":"1:409987052431:web:941f351ac7e52fe97e51fa","databaseURL":"https://sherman-nadlan-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"sherman-nadlan.appspot.com","locationId":"europe-west","apiKey":"AIzaSyAFQeGMLcWVhgliTrQ8u-VVz0gRDcNW_vg","authDomain":"sherman-nadlan.firebaseapp.com","messagingSenderId":"409987052431","measurementId":"G-P6ZCJ9RQDT"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] - info Creating an optimized production build...
+
+[info] uncaughtException [Error: EPERM: operation not permitted, open 'C:\Users\yoava\OneDrive\שולחן העבודה\sherman-next\.next\trace'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 'C:\\Users\\yoava\\OneDrive\\שולחן העבודה\\sherman-next\\.next\\trace'
+}
+
+[debug] [2023-08-12T11:55:04.297Z] Error: ENOENT: no such file or directory, open 'C:\Users\yoava\OneDrive\שולחן העבודה\sherman-next\.next\server\middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -1,0 +1,177 @@
+.menu {
+  /* padding: 2rem 2rem; */
+  position: relative;
+  width: 100%;
+  z-index: 60;
+  /* margin-top: 20px; */
+
+  display: grid;
+  /* gap: 10px; */
+  grid-template-columns: repeat(6, 1fr);
+  /* background-color: white; */
+  /* padding: 2rem 6rem; */
+  /* border-radius: 2rem; */
+}
+.contact {
+  display: none;
+}
+.contact div {
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  width: 100%;
+}
+.contact p {
+  color: #404b5b;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.contact svg {
+  width: 24px;
+  height: 24px;
+  color: #64b149;
+}
+
+.control {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  position: relative;
+  transition: top 0.3s ease;
+  top: 0;
+  color: #2e3642;
+  font-size: 1rem;
+  cursor: pointer;
+  max-width: 120px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:hover {
+  top: 0.2rem;
+}
+
+.item:hover .image {
+  transform: scale(1.06);
+}
+.item:hover .image::after {
+  opacity: 0;
+}
+
+.item p {
+  display: inline;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.image {
+  transition: transform 0.3s ease;
+  transform: scale(1);
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  background-size: cover;
+  object-fit: fill;
+}
+
+.image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #576985;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.offices {
+  background-image: url("/images/offices.jpg");
+}
+
+.shops {
+  background-image: url("/images/shops.jpg");
+}
+.industry {
+  background-image: url("/images/industry.jpg");
+}
+.fields {
+  background-image: url("/images/fields.jpg");
+}
+
+.houses {
+  background-image: url("/images/houses.jpg");
+}
+
+.estate {
+  background-image: url("/images/estate.jpg");
+}
+
+.image img {
+}
+
+/* For tablets with a screen width between 768px and 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Your CSS code for tablets goes here */
+  .image {
+    width: 80px;
+    height: 80px;
+  }
+  .item p {
+    font-size: 0.9rem;
+  }
+  .menu {
+  }
+  .contact {
+    display: block;
+  }
+}
+
+/* For smartphones with a screen width up to 767px */
+@media only screen and (max-width: 767px) {
+  /* Your CSS code for smartphones goes here */
+  .item {
+    /* font-size: 0.833rem; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .item p {
+    font-size: 0.7rem;
+  }
+  .image {
+    width: 60px;
+    height: 60px;
+  }
+  .menu {
+    width: 100%;
+    /* margin: 40px auto; */
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+  .contact {
+    display: block;
+  }
+}

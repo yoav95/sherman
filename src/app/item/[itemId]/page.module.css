@@ -1,0 +1,98 @@
+.image {
+  width: 100%;
+  height: 220px;
+  background-color: darkblue;
+  margin: 20px 0;
+  object-fit: contain;
+  object-position: center;
+  overflow: hidden;
+  position: relative;
+}
+.image h2 {
+  z-index: 100;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px 20px;
+}
+
+.image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), #343a45d8);
+}
+
+.image img {
+  top: -7rem;
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem 1rem;
+}
+
+.heading {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #404b5b;
+}
+
+.text {
+  margin-bottom: 20px;
+  width: 50%;
+  color: #212429;
+}
+
+.images {
+  display: flex;
+  width: 100%;
+  min-height: 200px;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 0 2rem 0;
+}
+
+.photo {
+  cursor: pointer;
+  height: 200px;
+  flex-grow: 0;
+  flex-basis: 200px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* For tablets with a screen width between 768px and 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Your CSS code for tablets goes here */
+
+  .text {
+    width: 70%;
+  }
+}
+
+/* For smartphones with a screen width up to 767px */
+@media only screen and (max-width: 767px) {
+  /* Your CSS code for smartphones goes here */
+
+  .text {
+    width: 100%;
+  }
+  .container {
+    padding-top: 0;
+  }
+}

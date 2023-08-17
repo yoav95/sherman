@@ -1,0 +1,40 @@
+.items {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(100px, auto));
+  gap: 20px;
+  color: white;
+}
+
+.loaderbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+}
+
+.top {
+  padding: 1rem 0;
+  width: 100%;
+  background: linear-gradient(360deg, #5e7598 0%, #6d88b0 100%);
+}
+.top h1 {
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* For tablets with a screen width between 768px and 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Your CSS code for tablets goes here */
+}
+
+/* For smartphones with a screen width up to 767px */
+@media only screen and (max-width: 767px) {
+  /* Your CSS code for smartphones goes here */
+  .items {
+    grid-template-columns: 1fr;
+  }
+}

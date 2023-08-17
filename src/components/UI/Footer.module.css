@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #4f6484;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.footer a {
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  color: #4f6484;
+  font-weight: 300;
+}
+.footer a .bold {
+  font-weight: 700;
+}

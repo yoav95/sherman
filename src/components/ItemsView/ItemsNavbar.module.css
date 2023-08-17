@@ -1,0 +1,103 @@
+.header {
+  background: linear-gradient(360deg, #5e7598 0%, #6d88b0 100%);
+
+  /* height: 60px; */
+  font-family: sans-serif;
+  box-shadow: 0px 4px 25px 7px rgba(0, 0, 0, 0.07);
+}
+
+.sliderBtn {
+  display: none;
+  /* display: flex; */
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.sliderBtn:hover {
+  transform: scale(1.1);
+}
+
+.header h2 {
+  font-size: 1.72813rem;
+  font-weight: 500;
+  letter-spacing: 0rem;
+}
+
+.nav {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  color: white;
+}
+
+.item {
+  letter-spacing: 0.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  gap: 0.4rem;
+}
+
+.item p {
+  padding: 0.3rem 0.5rem;
+}
+
+.topline {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  border: 1px solid white;
+  border-radius: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.btn.active,
+.btn:hover {
+  background-color: white;
+  color: #6d88b0;
+}
+
+.control {
+  display: flex;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Your CSS code for smartphones goes here */
+  .sliderBtn {
+    display: flex;
+  }
+
+  .nav {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .nav.active {
+    flex-direction: column;
+  }
+  .header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0rem;
+  }
+  .control {
+    display: none;
+    flex-direction: column;
+  }
+  .control.active {
+    display: flex;
+    flex-direction: column;
+  }
+}

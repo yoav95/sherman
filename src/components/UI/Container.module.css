@@ -1,0 +1,9 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+  height: 100%;
+  padding: 0 1rem;
+}
+.box {
+  padding-top: 1rem;
+}

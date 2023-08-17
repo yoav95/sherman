@@ -1,0 +1,79 @@
+.item {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 236px 130px;
+  height: 366px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.item:hover {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.331);
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+.item:hover .text {
+  background-color: #6d88b0;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
+.item:hover image {
+  transform: scale(1.1);
+}
+
+.image img {
+  transition: transform 0.3s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+.text {
+  transition: background-color 0.3s ease-in-out;
+  background-color: #576985;
+  padding: 10px 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.text h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.control {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.division {
+  display: flex;
+  flex-direction: column;
+}
+
+.property {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.value {
+  max-width: 8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

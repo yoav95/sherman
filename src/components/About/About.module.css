@@ -1,0 +1,67 @@
+.control {
+  padding: 2rem 0;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  z-index: 60;
+
+  gap: 20px;
+}
+.textbox {
+  width: 50%;
+  color: #404b5b;
+}
+
+.textbox h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.textbox p {
+  margin-bottom: 1rem;
+}
+
+.image {
+  /* height: 10px; */
+  width: 260px;
+  background-image: url("/images/sherman.jpg");
+  background-color: cadetblue;
+  background-position-y: -20px;
+  background-size: cover;
+  border-radius: 2rem;
+}
+
+/* For tablets with a screen width between 768px and 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Your CSS code for tablets goes here */
+}
+
+/* For smartphones with a screen width up to 767px */
+@media only screen and (max-width: 767px) {
+  /* Your CSS code for smartphones goes here */
+  .control {
+    /* padding-top: 80px; */
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .textbox {
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .textbox p {
+    font-size: 0.89rem;
+    line-height: 1.2rem;
+  }
+
+  .textbox h2 {
+    font-size: 1.1rem;
+  }
+
+  .image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+  }
+}

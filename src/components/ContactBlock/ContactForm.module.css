@@ -1,0 +1,91 @@
+.form {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 1.5625rem;
+  padding: 2.5rem;
+  gap: 1.25rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  align-items: flex-start;
+  color: #404b5b;
+}
+
+.form label {
+  font-weight: 600;
+}
+
+.form div {
+  width: 100%;
+}
+
+.form input {
+  margin-top: 0.4rem;
+  width: 100%;
+  border-radius: 0.625rem;
+  height: 2.5rem;
+  padding: 0.2rem 0.8rem;
+  outline: none;
+  border: none;
+  background: #f2f2f2;
+}
+
+.control {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.content textarea {
+  border-radius: 0.625rem;
+  background: #f2f2f2;
+  resize: none;
+  border: none;
+  font-family: sans-serif;
+  outline: none;
+  padding: 0.8rem 0.8rem;
+  margin-top: 0.4rem;
+  display: block;
+  width: 100%;
+  min-height: 6rem;
+}
+
+.control div input {
+  display: block;
+}
+
+.form button {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  border: none;
+  background-color: #9ebae4;
+}
+.err {
+  margin: 0 auto;
+  color: rgb(236, 97, 78);
+  padding: 0.4rem 0.6rem;
+  border: 1px solid rgb(236, 97, 78);
+}
+
+/* For tablets with a screen width between 768px and 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Your CSS code for tablets goes here */
+  .control {
+    flex-direction: column;
+  }
+}
+
+/* For smartphones with a screen width up to 767px */
+@media only screen and (max-width: 767px) {
+  /* Your CSS code for smartphones goes here */
+  .control {
+    flex-direction: column;
+  }
+}
