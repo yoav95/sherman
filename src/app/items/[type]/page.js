@@ -11,6 +11,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
+export const revalidate = 60 * 60;
+// false | 'force-cache' | 0 | number
+
 export function generateStaticParams() {
   return [
     {

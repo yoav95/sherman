@@ -4,6 +4,8 @@ import styles from "./page.module.css";
 import { getListing, getAllListings } from "@/services/services";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
+export const revalidate = 60 * 60;
+
 export async function generateStaticParams() {
   const data = await getAllListings();
   return data.map((listing) => ({
@@ -11,20 +13,20 @@ export async function generateStaticParams() {
   }));
 }
 
-export const getStaticPaths = async () => {
-  const data = await getAllListings();
-  const array = data.map((listing) => {
-    return {
-      params: {
-        itemId: listing.id,
-      },
-    };
-  });
-  return {
-    paths: array,
-    fallback: true,
-  };
-};
+// export const getStaticPaths = async () => {
+//   const data = await getAllListings();
+//   const array = data.map((listing) => {
+//     return {
+//       params: {
+//         itemId: listing.id,
+//       },
+//     };
+//   });
+//   return {
+//     paths: array,
+//     fallback: true,
+//   };
+// };
 
 const getImagesLinks = async (imageLocation, imagesLocations) => {
   const storage = getStorage();

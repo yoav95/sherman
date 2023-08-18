@@ -76,6 +76,10 @@
   text-decoration: none;
   text-align: center;
 }
+.svg {
+  filter: invert(17%) sepia(13%) saturate(1095%) hue-rotate(177deg)
+    brightness(94%) contrast(86%);
+}
 .list a:hover {
   color: #252b34;
 
@@ -136,5 +140,49 @@
   .list.open {
     opacity: 100%;
     pointer-events: all;
+  }
+}
+
+.trin-trin {
+  animation-name: trin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes trin {
+  from {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  20%,
+  32%,
+  44%,
+  56%,
+  68% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  23%,
+  35%,
+  47%,
+  59%,
+  71% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  26%,
+  38%,
+  50%,
+  62%,
+  74% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  29%,
+  41%,
+  53%,
+  65%,
+  77% {
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, 0deg);
   }
 }
