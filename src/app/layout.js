@@ -1,14 +1,13 @@
 import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Footer from "@/components/UI/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: `שרמן נדל"ן | דף הבית`,
 
-  description: `שרמן נדל"ן -נלד"ן בכל חלקי הארץ`,
+  description: `שרמן נדל"ן, נדל"ן בכל חלקי הארץ. נדל"ן בצפון הארץ, נכסים להשכרה ומכירה, נכסים בקריית שמונה`,
 };
 
 export default function RootLayout({ children }) {
@@ -20,7 +19,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );

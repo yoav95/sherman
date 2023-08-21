@@ -13,20 +13,13 @@ export async function generateStaticParams() {
   }));
 }
 
-// export const getStaticPaths = async () => {
-//   const data = await getAllListings();
-//   const array = data.map((listing) => {
-//     return {
-//       params: {
-//         itemId: listing.id,
-//       },
-//     };
-//   });
-//   return {
-//     paths: array,
-//     fallback: true,
-//   };
-// };
+export async function generateMetadata({ params }) {
+  const listing = await getListing(params.itemId);
+  return {
+    title: listing.title,
+    description: listing.text,
+  };
+}
 
 const getImagesLinks = async (imageLocation, imagesLocations) => {
   const storage = getStorage();
