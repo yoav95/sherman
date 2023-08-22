@@ -36,7 +36,7 @@ const Properties = ({ data }) => {
       listingProperties.push({ key: hebrewKey, value: data[key] });
     }
   }
-  console.log(listingProperties);
+  listingProperties = listingProperties.filter((x) => x.key !== "");
   return (
     <div className={styles.gridwrapper}>
       {listingProperties.map((p) => (
@@ -45,6 +45,7 @@ const Properties = ({ data }) => {
           <span>{p.value}</span>
         </div>
       ))}
+      {}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import ContactBlock from "@/components/ContactBlock/ContactBlock";
 import styles from "./page.module.css";
+import Properties from "@/components/SingleItemView/Properties";
 import { getListing, getAllListings } from "@/services/services";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
@@ -65,7 +66,7 @@ const Item = async ({ params }) => {
       <h3 className={styles.heading}>תיאור:</h3>
       <p className={styles.text}>{data.text}</p>
       <h3 className={styles.heading}>פרטים</h3>
-      {/* <Properties data={data} /> */}
+      <Properties data={data} />
 
       <div className={styles.images}>
         {imagesUrls ? (
