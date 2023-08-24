@@ -13,7 +13,10 @@ const ContactForm = () => {
   const formRef = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (name.length < 3 || contactDetails.length < 3) {
+      alert("פרטים חסרים");
+      return;
+    }
     emailjs
       .sendForm(
         "service_zb11coh",
@@ -54,7 +57,7 @@ const ContactForm = () => {
             <div>
               <label>אימייל\מספר פלאפון</label>
               <input
-                type="text"
+                type="tel"
                 name="contact"
                 placeholder="הכנס מספר פלאפון או אימייל"
                 onChange={(e) => setContactDetails(e.target.value)}
