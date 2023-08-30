@@ -1,11 +1,13 @@
 .item {
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.237);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 236px 130px;
-  height: 366px;
+  grid-template-rows: 236px 160px;
+  /* height: 366px; */
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .item:hover {
@@ -37,8 +39,9 @@
 }
 .text {
   transition: background-color 0.3s ease-in-out;
-  background-color: #576985;
-  padding: 10px 10px 20px 10px;
+  /* background-color: #576985; */
+  background: linear-gradient(0deg, #6d88b0 0%, #5e7598 100%);
+  padding: 10px 20px 20px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
