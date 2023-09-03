@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Analytics />
+        <script src="nagishli.js"></script>
       </body>
     </html>
   );
