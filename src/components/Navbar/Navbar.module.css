@@ -98,7 +98,13 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* Your CSS code for tablets goes here */
   .contact {
-    display: none;
+    margin: 1rem;
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
   }
   .nav {
     justify-content: space-evenly;
@@ -109,7 +115,13 @@
 @media only screen and (max-width: 767px) {
   /* Your CSS code for smartphones goes here */
   .contact {
-    display: none;
+    margin: 1rem;
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
   }
 
   .burger {
