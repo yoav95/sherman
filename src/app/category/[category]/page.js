@@ -5,6 +5,9 @@ import styles from "./page.module.css";
 import { getCategory } from "@/services/services";
 import { getHebrewTitle } from "@/utils/englishCategoryToHebrew";
 import { redirect } from "next/navigation";
+export const dynamic = "force-dynamic";
+
+
 
 export async function generateMetadata({ params }) {
   const hebrewTitle = getHebrewTitle(params.category);

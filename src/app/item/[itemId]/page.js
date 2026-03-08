@@ -4,15 +4,10 @@ import styles from "./page.module.css";
 import Properties from "@/components/SingleItemView/Properties";
 import { getListing, getAllListings } from "@/services/services";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
-
+export const dynamic = "force-dynamic";
 export const revalidate = 60 * 60;
 
-export async function generateStaticParams() {
-  const data = await getAllListings();
-  return data.map((listing) => ({
-    itemId: listing.id,
-  }));
-}
+
 
 export async function generateMetadata({ params }) {
   const listing = await getListing(params.itemId);

@@ -4,7 +4,7 @@ import Items from "@/components/ItemsView/Items";
 import { getListings } from "@/services/services";
 import { redirect } from "next/navigation";
 import CategoryNavigationBar from "@/components/CategoryNavigationBar/CategoryNavigationBar";
-
+export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }) {
   const hebrewTitle = getHebrewDealType(params.type);
   return {
