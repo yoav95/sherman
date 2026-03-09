@@ -16,6 +16,11 @@ export default function RootLayout({ children }) {
     <html lang="he" dir="rtl">
       <head>
         <link rel="icon" href="/favicon.ico" />
+      </head>
+
+      <body className={inter.className}>
+        <Navbar />
+        {children}
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DH4MM0QSMH"
@@ -31,11 +36,6 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-      </head>
-
-      <body className={inter.className}>
-        <Navbar />
-        {children}
         <Analytics />
       </body>
     </html>
