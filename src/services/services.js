@@ -83,3 +83,22 @@ export const getCategory = async (category) => {
     return null;
   }
 };
+
+export const getListingsByRegion = async (region) => {
+  const q = query(
+    listingsRef,
+    where("location", "==", region),
+    orderBy("on_update", "desc")
+  );
+  try {
+    const querySnapshot = await getDocs(q);
+    let listings = [];
+    querySnapshot.forEach((doc) => {
+      listings.push({ ...doc.data(), id: doc.id });
+    });
+    return listings;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};

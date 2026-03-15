@@ -51,6 +51,8 @@ const Navbar = () => {
             <Link href="/items/south">דרום</Link>
             <Link href="/items/north">צפון</Link>
             <Link href="/items/center">מרכז</Link>
+            <Link href="/items/rent">להשכרה</Link>
+            <Link href="/items/sale">למכירה</Link>
           </div>
         </nav>
       </Container>
