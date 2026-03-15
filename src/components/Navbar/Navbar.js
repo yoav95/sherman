@@ -5,12 +5,8 @@ import { FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
 import Hamburger from "hamburger-react";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
-
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
-  const pathname = usePathname();
-  const isHomePage = pathname === "/";
 
   return (
     <header className={styles.header}>
@@ -51,13 +47,11 @@ const Navbar = () => {
           <div className={styles.burger}>
             <Hamburger size={25} toggled={isOpen} toggle={setOpen} />
           </div>
-          {!isHomePage && (
-            <div className={styles.locationFilters}>
-              <Link href="/items/south">דרום</Link>
-              <Link href="/items/north">צפון</Link>
-              <Link href="/items/center">מרכז</Link>
-            </div>
-          )}
+          <div className={styles.locationFilters}>
+            <Link href="/items/south">דרום</Link>
+            <Link href="/items/north">צפון</Link>
+            <Link href="/items/center">מרכז</Link>
+          </div>
         </nav>
       </Container>
     </header>
