@@ -1,13 +1,9 @@
 import React from "react";
-import Container from "@/components/UI/Container";
-import Item from "@/components/ItemsView/Item";
-import styles from "./page.module.css";
+import Items from "@/components/ItemsView/Items";
 import { getCategory } from "@/services/services";
 import { getHebrewTitle } from "@/utils/englishCategoryToHebrew";
 import { redirect } from "next/navigation";
 export const dynamic = "force-dynamic";
-
-
 
 export async function generateMetadata({ params }) {
   const hebrewTitle = getHebrewTitle(params.category);
@@ -20,24 +16,12 @@ export const revalidate = 60 * 60;
 
 export function generateStaticParams() {
   return [
-    {
-      category: "offices",
-    },
-    {
-      category: "stores",
-    },
-    {
-      category: "logistics",
-    },
-    {
-      category: "fields",
-    },
-    {
-      category: "houses",
-    },
-    {
-      category: "estate",
-    },
+    { category: "offices" },
+    { category: "stores" },
+    { category: "logistics" },
+    { category: "fields" },
+    { category: "houses" },
+    { category: "estate" },
   ];
 }
 
@@ -48,20 +32,6 @@ export default async function Page({ params }) {
   }
   const listingsToRender = await getCategory(hebrewTitle);
   return (
-    <>
-      <div className={styles.top}>
-        <Container>
-          <h1>{hebrewTitle}</h1>
-        </Container>
-      </div>
-      <Container type={true}>
-        <div className={styles.items}>
-          {listingsToRender &&
-            listingsToRender.map((listing) => (
-              <Item key={listing.id} {...listing} />
-            ))}
-        </div>
-      </Container>
-    </>
+    <Items listingsData={JSON.stringify(listingsToRender)} type={hebrewTitle} />
   );
 }
