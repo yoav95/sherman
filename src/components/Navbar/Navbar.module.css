@@ -94,6 +94,10 @@
   display: none;
 }
 
+.locationFilters {
+  display: none;
+}
+
 /* For tablets with a screen width between 768px and 1024px */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* Your CSS code for tablets goes here */
@@ -127,6 +131,25 @@
   .burger {
     display: block;
     z-index: 102;
+  }
+
+  .locationFilters {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    left: 1rem;
+    top: 4.5rem;
+  }
+
+  .locationFilters a {
+    background-color: white;
+    color: #404b5b;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .header {
