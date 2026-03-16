@@ -15,7 +15,7 @@ const CategoryNavigationBar = () => {
           <Link href="/category/offices">משרדים</Link>
         </li>
         <li>
-          <Link href="/category/stores">חנויות ומסחר</Link>
+          <Link href="/category/stores">מסחר ותחנות דלק</Link>
         </li>
         <li>
           <Link href="/category/logistics">תעשייה ולוגיסטיקה</Link>

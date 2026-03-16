@@ -18,7 +18,7 @@ export const getHebrewTitle = (englishTitle) => {
       hebrewTitle = "משרדים";
       break;
     case "stores":
-      hebrewTitle = "חנויות ומסחר";
+      hebrewTitle = "מסחר ותחנות דלק";
       break;
     case "logistics":
       hebrewTitle = "תעשייה ולוגיסטיקה";

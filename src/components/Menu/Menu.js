@@ -20,7 +20,7 @@ const Menu = () => {
           <Link href="/category/stores">
             <div className={styles.item}>
               <div className={`${styles.image} ${styles.shops}`}></div>
-              <p>חנויות ומסחר</p>
+              <p> מסחר ותחנות דלק</p>
             </div>
           </Link>
         </div>
