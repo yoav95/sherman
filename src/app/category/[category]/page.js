@@ -1,14 +1,14 @@
 import React from "react";
 import Items from "@/components/ItemsView/Items";
 import { getCategory } from "@/services/services";
-import { getHebrewTitle } from "@/utils/englishCategoryToHebrew";
+import { getHebrewTitle, getDisplayTitle } from "@/utils/englishCategoryToHebrew";
 import { redirect } from "next/navigation";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }) {
-  const hebrewTitle = getHebrewTitle(params.category);
+  const displayTitle = getDisplayTitle(params.category);
   return {
-    title: `שרמן נדל"ן | ${hebrewTitle}`,
+    title: `שרמן נדל"ן | ${displayTitle}`,
   };
 }
 
@@ -27,11 +27,12 @@ export function generateStaticParams() {
 
 export default async function Page({ params }) {
   const hebrewTitle = getHebrewTitle(params.category);
+  const displayTitle = getDisplayTitle(params.category);
   if (hebrewTitle === null) {
     redirect("/");
   }
   const listingsToRender = await getCategory(hebrewTitle);
   return (
-    <Items listingsData={JSON.stringify(listingsToRender)} type={hebrewTitle} />
+    <Items listingsData={JSON.stringify(listingsToRender)} type={displayTitle} />
   );
 }

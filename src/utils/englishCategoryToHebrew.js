@@ -11,6 +11,7 @@ export const getHebrewDealType = (dealType) => {
   }
 };
 
+// For database queries - must match Firebase propertyType values
 export const getHebrewTitle = (englishTitle) => {
   let hebrewTitle = null;
   switch (englishTitle) {
@@ -18,7 +19,7 @@ export const getHebrewTitle = (englishTitle) => {
       hebrewTitle = "משרדים";
       break;
     case "stores":
-      hebrewTitle = "מסחר ותחנות דלק";
+      hebrewTitle = "חנויות ומסחר";
       break;
     case "logistics":
       hebrewTitle = "תעשייה ולוגיסטיקה";
@@ -34,6 +35,14 @@ export const getHebrewTitle = (englishTitle) => {
       break;
   }
   return hebrewTitle;
+};
+
+// For display in UI
+export const getDisplayTitle = (englishTitle) => {
+  if (englishTitle === "stores") {
+    return "מסחר ותחנות דלק";
+  }
+  return getHebrewTitle(englishTitle);
 };
 
 export const getHerbewLocation = (location) => {
