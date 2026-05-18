@@ -1,6 +1,6 @@
 .form {
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.08);
-  border-radius: 1.5625rem;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.15);
+  border-radius: 1.5rem;
   padding: 2.5rem;
   gap: 1.25rem;
   display: flex;
@@ -10,10 +10,19 @@
   background-color: white;
   align-items: flex-start;
   color: #404b5b;
+  animation: slideInRight 0.5s ease-out;
+}
+
+.form h2 {
+  text-align: center;
+  width: 100%;
+  color: #2d4a7c;
+  font-size: 1.5rem;
 }
 
 .form label {
   font-weight: 600;
+  color: #404b5b;
 }
 
 .form div {
@@ -24,11 +33,23 @@
   margin-top: 0.4rem;
   width: 100%;
   border-radius: 0.625rem;
-  height: 2.5rem;
-  padding: 0.2rem 0.8rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
   outline: none;
-  border: none;
-  background: #f2f2f2;
+  border: 2px solid transparent;
+  background: #f5f7fa;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form input:focus {
+  border-color: #9ebae4;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(158, 186, 228, 0.2);
+}
+
+.form input::placeholder {
+  color: #a0aec0;
 }
 
 .control {
@@ -38,16 +59,28 @@
 
 .content textarea {
   border-radius: 0.625rem;
-  background: #f2f2f2;
+  background: #f5f7fa;
   resize: none;
-  border: none;
+  border: 2px solid transparent;
   font-family: sans-serif;
   outline: none;
-  padding: 0.8rem 0.8rem;
+  padding: 1rem;
   margin-top: 0.4rem;
   display: block;
   width: 100%;
   min-height: 6rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.content textarea:focus {
+  border-color: #9ebae4;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(158, 186, 228, 0.2);
+}
+
+.content textarea::placeholder {
+  color: #a0aec0;
 }
 
 .control div input {
@@ -55,28 +88,54 @@
 }
 
 .form button {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-style: normal;
-  font-weight: 600;
-  margin-top: 0.5rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
   cursor: pointer;
   color: white;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 0.625rem;
   border: none;
-  background-color: #9ebae4;
+  background: linear-gradient(135deg, #2d4a7c 0%, #1a2a4a 100%);
+  box-shadow: 0 4px 15px rgba(45, 74, 124, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 74, 124, 0.4);
+}
+
+.form button:active {
+  transform: translateY(0);
+}
+
 .err {
   margin: 0 auto;
   color: rgb(236, 97, 78);
-  padding: 0.4rem 0.6rem;
+  padding: 0.6rem 1rem;
   border: 1px solid rgb(236, 97, 78);
+  border-radius: 0.5rem;
+  background: rgba(236, 97, 78, 0.1);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* For tablets with a screen width between 768px and 1024px */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Your CSS code for tablets goes here */
   .control {
     flex-direction: column;
   }
@@ -84,8 +143,16 @@
 
 /* For smartphones with a screen width up to 767px */
 @media only screen and (max-width: 767px) {
-  /* Your CSS code for smartphones goes here */
   .control {
     flex-direction: column;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+
+  .form button {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
   }
 }

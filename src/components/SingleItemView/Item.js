@@ -64,7 +64,7 @@ const Item = ({ data }) => {
             ))}
         </div>
       )}
-      <h3 className={styles.heading}>מתעניין בקשר לנכס? צור איתנו קשר</h3>
+      <h3 className={styles.heading}>למבני תעשיה, קרקעות ונכסים מסחריים - צור קשר עכשיו</h3>
       <ContactForm />
     </div>
   );

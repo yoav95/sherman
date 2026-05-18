@@ -65,16 +65,16 @@
 }
 /* ---------- */
 
-/* SECTION THREE */
-.sectionThree {
-  min-height: 60vh;
+/* SECTION CLIENTS */
+.sectionClients {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
+/* ---------- */
 
-.fullwidth {
+/* SECTION THREE */
+.sectionThree {
   width: 100%;
 }
 /*  */

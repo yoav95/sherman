@@ -1,9 +1,9 @@
 import Container from "../components/UI/Container";
 import styles from "./Home.module.css";
 import Menu from "../components/Menu/Menu";
-import { FaPhoneAlt } from "react-icons/fa";
 import About from "../components/About/About";
 import ContactBlock from "@/components/ContactBlock/ContactBlock";
+import Clients from "@/components/Clients/Clients";
 
 const HomePage = () => {
   return (
@@ -24,12 +24,11 @@ const HomePage = () => {
       <section className={styles.sectionTwo} id="about">
         <About />
       </section>
+      <section className={styles.sectionClients}>
+        <Clients />
+      </section>
       <section className={styles.sectionThree} id="contact">
-        <div className={styles.fullwidth}>
-          <Container>
-            <ContactBlock />
-          </Container>
-        </div>
+        <ContactBlock />
       </section>
     </>
   );
