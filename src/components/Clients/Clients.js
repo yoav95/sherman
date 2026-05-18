@@ -1,5 +1,4 @@
 import styles from "./Clients.module.css";
-import Image from "next/image";
 
 const clients = [
   { name: "אלקטרה", logo: "/images/clients/electra.png" },
@@ -21,11 +20,9 @@ const Clients = () => {
       <div className={styles.logosGrid}>
         {clients.map((client, index) => (
           <div key={index} className={styles.logoItem}>
-            <Image
+            <img
               src={client.logo}
               alt={client.name}
-              width={120}
-              height={60}
               className={styles.logo}
             />
           </div>
