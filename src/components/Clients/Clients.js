@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const clients = [
   { name: "אלקטרה", logo: "/images/clients/electra.png" },
-  { name: "Enlight", logo: "/images/clients/enlight.png" },
-  { name: "רמי לוי", logo: "/images/clients/rami-levi.png" },
+  { name: "Enlight", logo: "/images/clients/enlight.jpg" },
+  { name: "רמי לוי", logo: "/images/clients/rami-levi.jpg" },
   { name: "REIT1", logo: "/images/clients/reit1.png" },
   { name: "שבירו", logo: "/images/clients/shaviro.png" },
   { name: "מניבים", logo: "/images/clients/menivim.png" },
