@@ -16,7 +16,7 @@ const clients = [
 const Clients = () => {
   return (
     <div className={styles.clientsSection}>
-      <h2 className={styles.title}>לקוחות שעבדנו איתם</h2>
+      <h2 className={styles.title}>בין לקוחותינו</h2>
       <div className={styles.logosGrid}>
         {clients.map((client, index) => (
           <div key={index} className={styles.logoItem}>
